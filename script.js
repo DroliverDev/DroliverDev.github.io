@@ -50,6 +50,7 @@ const translations = {
     project3Desc: 'Modern portfolio CMS with lightweight, fast frontend delivery.',
     viewCode: 'View Code',
     footerRights: 'All rights reserved.',
+    changeLanguageLabel: 'Change language',
   },
   pt: {
     pageTitle: 'Daniele Oliveira | Portfólio',
@@ -91,6 +92,7 @@ const translations = {
     project3Desc: 'CMS de portfólio moderno com frontend leve e rápido.',
     viewCode: 'Ver Código',
     footerRights: 'Todos os direitos reservados.',
+    changeLanguageLabel: 'Mudar idioma',
   },
 };
 
@@ -114,12 +116,11 @@ function applyLanguage(lang) {
     }
   });
 
-  if (langFlag && langLabel) {
+  if (langFlag) {
     langFlag.src = selected === 'pt'
       ? 'assets/flag-br.svg'
       : 'assets/flag-us.svg';
     langFlag.alt = selected === 'pt' ? 'Brazil flag' : 'United States flag';
-    langLabel.textContent = selected.toUpperCase();
   }
 
   localStorage.setItem('language', selected);
