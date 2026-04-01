@@ -116,8 +116,8 @@ function applyLanguage(lang) {
 
   if (langFlag && langLabel) {
     langFlag.src = selected === 'pt'
-      ? 'https://flagcdn.com/24x18/br.png'
-      : 'https://flagcdn.com/24x18/us.png';
+      ? 'assets/flag-br.svg'
+      : 'assets/flag-us.svg';
     langFlag.alt = selected === 'pt' ? 'Brazil flag' : 'United States flag';
     langLabel.textContent = selected.toUpperCase();
   }
